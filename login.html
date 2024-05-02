@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="form" id="reg-form">
+            <form action="data.html" method="GET" id="regform">
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </li>
+                
+                <button type="submit" id="b4">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('reg-form').addEventListener('submit', function(event){
+            event.preventDefault();
+    
+            const emailnew = document.getElementById('email').value;
+            const passwordnew = document.getElementById('password').value;
+
+            const userdata = JSON.parse(localStorage.getItem('userdata'));
+
+            console.log(emailnew);
+            console.log(userdata.email);
+            console.log(passwordnew);
+            console.log(userdata.password);
+
+            if(userdata && emailnew === userdata.email && passwordnew === userdata.password)
+            {
+                alert('Login Successfull');
+                window.location.href ='data.html';
+            } else {
+                alert('Enter correct email or password!!');
+            }
+            
+        })
+    </script>
+</body>
+</html>

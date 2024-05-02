@@ -1,0 +1,77 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    
+}
+.form{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    list-style: none;
+    width: 250px;
+    
+}
+
+form{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(115, 193, 242);
+}
+
+label{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: rgb(227, 224, 221);
+    width: 100%;
+}
+.gender-cont{
+    display: flex;
+}
+.gender-cont div{
+    margin-right: 10px;
+}
+.hobbycont{
+    display: flex;
+}
+.hobbycont div{
+    margin-right: 10px;
+}
+.button{
+    display: flex;
+}
+.button div{
+    margin-right: 20px;
+}
+button{
+    margin-top: 10px;
+    translate: 15px;
+    color: rgb(254, 254, 254);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 25px;
+}
+#b1 , #b4{
+    background-color: rgb(42, 207, 42);
+}
+
+#b2{
+    background-color: rgb(8, 56, 132);
+}
+
+#b3{
+    background-color: rgb(132, 43, 8);
+}
+

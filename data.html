@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont">
+        <div id="display-data"></div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            const userstoreddata= localStorage.getItem('userdata');
+            const userstoredatacont= document.getElementById('display-data');
+            if(userstoreddata)
+            {
+                const userdata = JSON.parse(userstoreddata);
+                userstoredatacont.innerHTML = `
+                <p>WELCOME, ${userdata.name}</p>
+                <p>Name: ${userdata.name}</p>
+                <p>Email: ${userdata.email}</p>
+                <p>Gender: ${userdata.gender}</p>
+                <p>Date of birth: ${userdata.dob}</p>
+                <p>City: ${userdata.city}</p>
+                <p>Pincode: ${userdata.pincode}</p>
+                <p>Hobbies: ${userdata.hobbies}</p>
+                `;
+            }
+            
+        })
+    </script>
+</body>
+</html>
